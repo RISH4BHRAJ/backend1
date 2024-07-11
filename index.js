@@ -1,6 +1,7 @@
 //dev script (in package.json) can be called live or build instead of "dev" once completed
 //testBranch
 const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Payments = require('./models/Payments.js');
@@ -12,6 +13,12 @@ require('dotenv/config'); //enables using .env file
 
 const app = express();
 
+const corsOptions = {
+  origin: 'https://668fa373d777370596caec6a--gentle-sprinkles-769258.netlify.app',
+  optionsSuccessStatus: 200 // For legacy browser support
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(express.json()); //added
 app.use(bodyParser.urlencoded({extended:true})); //modified, false to true

@@ -14,7 +14,7 @@ require('dotenv/config'); //enables using .env file
 const app = express();
 
 const corsOptions = {
-  origin: 'https://668fa373d777370596caec6a--gentle-sprinkles-769258.netlify.app',
+  origin: 'https://frontend-kappa-inky-35.vercel.app',
   optionsSuccessStatus: 200 // For legacy browser support
 };
 
